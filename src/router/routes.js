@@ -1,4 +1,3 @@
-
 const routes = [
   // {
   //   path: '/',
@@ -10,6 +9,10 @@ const routes = [
   {
     path: '/',
     component: () => import('pages/Login.vue')
+  },
+  {
+    path: '/signup',
+    component: () => import('pages/SignUp.vue')
   },
 
   // Always leave this as last one,

@@ -10,7 +10,7 @@
       />
     </div>
     <div class="column full-width">
-      <div class="form--login__bgcolor q-pa-md row ">
+      <div class="form--login__bgcolor q-pa-md">
         <div class="col-12 q-py-md">
           <q-input v-model="login" label="Username" dense />
         </div>
@@ -53,10 +53,10 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .form--login__bgcolor {
   background-color: #555fd2 !important;
-  border-radius: 0 0 8% 8% !important;
+  border-radius: 0 0 32px 32px !important;
 }
 .text--password__size {
   font-size: 12px;
@@ -68,18 +68,5 @@ export default {
 .btn--login {
   font-size: 12px !important;
   padding: 5px;
-}
-.q-field__label {
-  color: #cbd0e0;
-  opacity: 0.6;
-}
-.q-field__control {
-  color: #cbd0e0 !important;
-  opacity: 0.6;
-  height: 20px;
-}
-.q-field--standard .q-field__control:before {
-  border-color: #cbd0e0 !important;
-  opacity: 0.6 !important;
 }
 </style>
