@@ -1,52 +1,34 @@
 <template>
-  <div class="q-px-md q-pt-md" style="height: 100vh">
-    <div class="row container--signup">
+  <div class="q-px-md q-pt-md ">
+    <div class="column container--signup">
       <div class="col-12 q-px-sm q-py-lg">
         <div class="float-left absolute">
-          <q-icon
-            class="float-left"
-            name="mdi-chevron-left"
-            color="white"
-            size="md"
-          />
+          <q-icon class="float-left" name="mdi-chevron-left" color="white" size="md" />
         </div>
         <div class="text-center text-subtitle1 text-weight-regular text-white">
           Sign Up
         </div>
       </div>
       <div class="column full-width">
-        <div class="form--login__bgcolor q-pa-md">
+        <div class="form--login__bgcolor q-pa-md" style="height: 82vh !important">
           <div class="col-12 q-py-md test">
             <q-input v-model="login" label="Username" dense />
           </div>
           <div class="col-12 q-py-md">
-            <q-input v-model="login" label="Password" dense />
+            <q-input class="teste" v-model="phone" label="Phone" dense />
           </div>
           <div class="col-12 q-py-md">
-            <q-input v-model="login" label="Username" dense />
+            <q-input v-model="password" label="Password" dense />
           </div>
           <div class="col-12 q-py-md">
-            <q-input v-model="login" label="Password" dense />
+            <q-input v-model="confirmPassword" label="Confirm Password" dense />
           </div>
-          <div class="col-12 row q-py-xl">
+          <div class="col-12 row q-py-lg">
             <div class="col-12 q-pb-md">
-              <q-btn
-                class="btn--login btn--signin__bgcolor full-width"
-                color="secondary"
-                label="SIGN IN"
-                rounded
-              />
+              <q-btn class="btn--login btn--signin__bgcolor full-width" color="secondary" label="SIGN IN" rounded />
             </div>
             <div class="col-12 q-pb-md">
-              <q-btn
-                no-caps
-                class=" btn--login btn--facebook full-width"
-                outline
-                color="indigo"
-                icon="fab fa-facebook-square"
-                label="Connect with Facebook"
-                rounded
-              />
+              <q-btn no-caps class=" btn--login btn--facebook full-width" outline color="indigo" icon="fab fa-facebook-square" label="Connect with Facebook" rounded />
             </div>
           </div>
         </div>
@@ -59,7 +41,9 @@ export default {
   data () {
     return {
       login: '',
-      password: ''
+      phone: '',
+      password: '',
+      confirmPassword: ''
     }
   }
 }
