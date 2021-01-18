@@ -14,6 +14,10 @@ const routes = [
     path: '/signup',
     component: () => import('pages/SignUp.vue')
   },
+  {
+    path: '/dashboard',
+    component: () => import('pages/Dashboard.vue')
+  },
 
   // Always leave this as last one,
   // but you can also remove it
