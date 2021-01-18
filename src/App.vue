@@ -9,10 +9,10 @@ export default {
 }
 </script>
 <style>
-.q-field__label {
+/* .q-field__label {
   color: #cbd0e0;
-  /* opacity: 0.6; */
-}
+  /* opacity: 0.6;
+} */
 .q-field__control {
   color: #cbd0e0 !important;
   opacity: 0.6;
