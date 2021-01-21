@@ -25,89 +25,26 @@
         </div>
         <div class="col-3 column items-center">
           <div class="column"><q-avatar color="white" text-color="deep-orange-5" icon="mdi-eye" /></div>
-          <div class="column"><p class="circle--text text-grey q-mt-sm">Eye</p></div>
+          <div class="column"><p class="circle--text q-mt-sm">Eye</p></div>
         </div>
         <div class="col-3 column items-center">
           <div class="column"><q-avatar color="white" text-color="info" icon="mdi-heart-pulse" /></div>
-          <div class="column"><p class="circle--text text-grey q-mt-sm">Heart</p></div>
+          <div class="column"><p class="circle--text q-mt-sm">Heart</p></div>
         </div>
         <div class="col-3 column items-center">
-          <div class="column"><q-avatar color="white" text-color="purple" icon="warning" /></div>
-          <div class="column"><p class="circle--text text-grey q-mt-sm">Nose</p></div>
+          <div class="column"><q-avatar color="white" text-color="purple" icon="mdi-account" /></div>
+          <div class="column"><p class="circle--text q-mt-sm">Nose</p></div>
         </div>
         <div class="col-3 column items-center">
           <div class="column"><q-avatar color="white" text-color="secondary" icon="mdi-widgets-outline" /></div>
-          <div class="column"><p class="circle--text text-secondary text-teal-12 q-mt-sm">See All</p></div>
+          <div class="column"><p class="circle--text text-secondary q-mt-sm">See All</p></div>
         </div>
       </div>
       <div class="column full-width">
         <div class="form--login__bgcolor row">
-          <p class=" q-px-md q-pt-md text-weight-bolder text-blue-grey-9">Top Doctors</p>
+          <p class=" q-px-md q-pt-md text-weight-bold text-items-color">Top Doctors</p>
           <q-list class="rounded-borders full-width q-px-md q-pb-md">
-            <q-item clickable class="bg-white full-width q-mb-sm">
-              <q-item-section avatar>
-                <q-avatar>
-                  <img src="https://cdn.quasar.dev/img/avatar2.jpg" />
-                </q-avatar>
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label lines="1">Dr Junior Monteiro</q-item-label>
-                <q-item-label caption lines="2">
-                  <span class="">Heart Surgon</span>
-                </q-item-label>
-              </q-item-section>
-
-              <q-item-section side>
-                <div class="flex items-center">
-                  <q-icon class="q-pr-xs" name="star" size="12px" color="amber-8" />
-                  <div class="">4.5</div>
-                </div>
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-ripple class="bg-white full-width q-mb-sm">
-              <q-item-section avatar>
-                <q-avatar>
-                  <img src="https://cdn.quasar.dev/img/avatar2.jpg" />
-                </q-avatar>
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label lines="1">Dra Bianca Corrêa</q-item-label>
-                <q-item-label caption lines="2">
-                  <span class="">Heart Surgon</span>
-                </q-item-label>
-              </q-item-section>
-
-              <q-item-section side>
-                <div class="flex items-center">
-                  <q-icon class="q-pr-xs" name="star" size="12px" color="amber-8" />
-                  <div>4.5</div>
-                </div>
-              </q-item-section>
-            </q-item>
-            <q-item clickable v-ripple class="bg-white full-width q-mb-sm">
-              <q-item-section avatar>
-                <q-avatar>
-                  <img src="https://cdn.quasar.dev/img/avatar2.jpg" />
-                </q-avatar>
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label lines="1">Dra Bianca Corrêa</q-item-label>
-                <q-item-label caption lines="2">
-                  <span class="">Heart Surgon</span>
-                </q-item-label>
-              </q-item-section>
-
-              <q-item-section side>
-                <div class="flex items-center">
-                  <q-icon class="q-pr-xs" name="star" size="12px" color="amber-8" />
-                  <div>4.5</div>
-                </div>
-              </q-item-section>
-            </q-item>
+            <q-item-custom :doctors="doctors" />
           </q-list>
         </div>
       </div>
@@ -115,10 +52,34 @@
   </div>
 </template>
 <script>
+import QItemCustom from '../components/QItemCustom'
 export default {
+  components: {
+    QItemCustom
+  },
   data () {
     return {
-      search: ''
+      search: '',
+      doctors: [
+        {
+          avatar: 'https://cdn.quasar.dev/img/avatar1.jpg',
+          name: 'Dr. Junior Monteiro',
+          speciality: 'Heart Surgon',
+          ranking: '4.2'
+        },
+        {
+          avatar: 'https://cdn.quasar.dev/img/avatar2.jpg',
+          name: 'Dra. Bianca Monteiro',
+          speciality: 'Heart Surgon',
+          ranking: '4.7'
+        },
+        {
+          avatar: 'https://cdn.quasar.dev/img/avatar4.jpg',
+          name: 'Dr. Augusto Trindade',
+          speciality: 'Heart Surgon',
+          ranking: '5.0'
+        }
+      ]
     }
   }
 }
@@ -144,7 +105,14 @@ export default {
   padding: 5px;
 }
 .circle--text {
-  font-size: 13px;
-  opacity: 0.7;
+  font-size: 12px;
+  color: #ced5ff !important;
+  opacity: 1;
+}
+p.circle--text.text-secondary {
+  color: $teal-13 !important;
+}
+.text-items-color {
+  color: #132754 !important;
 }
 </style>
